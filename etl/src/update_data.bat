@@ -1,0 +1,1 @@
+"C:\Python310\python.exe" "C:\Users\Adalberto González\Documents\GitHub\Practical_Case_Engineering\etl\src\update_data.py" > "C:\Users\Adalberto González\Documents\GitHub\Practical_Case_Engineering\etl\src\update_data.log" 2>&1

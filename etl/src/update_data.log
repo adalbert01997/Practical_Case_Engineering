@@ -10,3 +10,15 @@
 2024-07-22 19:49:25,217:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorDetails:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorCode:140"]
 2024-07-22 19:49:25,508:INFO:Successful connection to Banxico API.
 2024-07-22 19:49:26,171:INFO:New data for banxico stored in MongoDB.
+2024-07-22 20:34:07,638:INFO:Starting update_data script.
+2024-07-22 20:34:07,654:INFO:Environment variables loaded.
+2024-07-22 20:34:08,699:INFO:Connected to MongoDB.
+2024-07-22 20:34:08,699:INFO:Starting data extraction process.
+2024-07-22 20:34:09,423:ERROR:Error connecting to INEGI API for indicator consumer_confidence: 405
+2024-07-22 20:34:09,423:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, consumer_confidence","ErrorDetails:El valor no tiene un formato valido, consumer_confidence","ErrorCode:140"]
+2024-07-22 20:34:10,494:ERROR:Error connecting to INEGI API for indicator PIB: 405
+2024-07-22 20:34:10,494:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, PIB","ErrorDetails:El valor no tiene un formato valido, PIB","ErrorCode:140"]
+2024-07-22 20:34:11,074:ERROR:Error connecting to INEGI API for indicator Gasto nacional en educación total como porcentaje del PIB: 405
+2024-07-22 20:34:11,074:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorDetails:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorCode:140"]
+2024-07-22 20:34:11,359:INFO:Successful connection to Banxico API.
+2024-07-22 20:34:12,095:INFO:New data for banxico stored in MongoDB.
