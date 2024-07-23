@@ -7,9 +7,9 @@ import logging
 from clean_and_store_data import clean_data, store_data
 from constants import (
     INEGI_API_URL,
-    BANXICO_API_URL_TEMPLATE,
+    BANXICO_API_URL,
     INEGI_TOKEN,
-    BANXICO_API_TOKEN,
+    BANXICO_TOKEN,
     MONGO_URI,
 )
 
@@ -23,18 +23,22 @@ logging.basicConfig(
 
 logging.info("Starting update_data script.")
 
-# Load environment variables from .env file
+# Cargar variables de entorno desde el archivo .env
 load_dotenv()
 logging.info("Environment variables loaded.")
 
-# Connect to MongoDB
-client = MongoClient(MONGO_URI)
-db = client["economic_data"]
-logging.info("Connected to MongoDB.")
+# Conectar a MongoDB
+try:
+    client = MongoClient(MONGO_URI)
+    db = client["economic_data"]
+    logging.info("Connected to MongoDB.")
+except Exception as e:
+    logging.error(f"Failed to connect to MongoDB: {e}")
+    exit(1)
 
 
-# Function to get INEGI data
 def get_inegi_data(indicator_id):
+    logging.info(f"Fetching INEGI data for indicator {indicator_id}")
     url = INEGI_API_URL.format(indicator_id=indicator_id, token=INEGI_TOKEN)
     response = requests.get(url)
     if response.status_code == 200:
@@ -63,13 +67,10 @@ def get_inegi_data(indicator_id):
     return None
 
 
-# Function to get Banxico data
-def get_banxico_data(series_id, start_date, end_date):
-    url = BANXICO_API_URL_TEMPLATE.format(
-        series_id=series_id, start_date=start_date, end_date=end_date
-    )
-    headers = {"Bmx-Token": BANXICO_API_TOKEN}
-    response = requests.get(url, headers=headers)
+def get_banxico_data():
+    logging.info("Fetching Banxico data")
+    headers = {"Bmx-Token": BANXICO_TOKEN}
+    response = requests.get(BANXICO_API_URL, headers=headers)
     if response.status_code == 200:
         try:
             data = response.json()
@@ -90,42 +91,52 @@ def get_banxico_data(series_id, start_date, end_date):
     return None
 
 
+def store_data(df, collection_name):
+    logging.info(f"Storing data in collection {collection_name}")
+    collection = db[collection_name]
+    try:
+        collection.insert_many(df.to_dict("records"), ordered=False)
+        logging.info(f"New data for {collection_name} stored in MongoDB.")
+    except Exception as e:
+        logging.error(f"Error storing data in collection {collection_name}: {e}")
+
+
 def main():
     logging.info("Starting data extraction process.")
     try:
-        # Update INEGI data
+        # Actualizar datos de INEGI
         inegi_indicators = {
             "consumer_confidence": "1002000001",
             "PIB": "472079",
             "Gasto nacional en educación total como porcentaje del PIB": "6207067825",
         }
-        # Extract and store INEGI data
-        for indicator_id, collection_name in inegi_indicators.items():
+        for collection_name, indicator_id in inegi_indicators.items():
+            logging.info(f"Processing INEGI indicator {indicator_id}")
             data = get_inegi_data(indicator_id)
             if data:
-                db[collection_name].delete_many({})  # Remove old data
+                logging.info(f"Cleaning data for INEGI indicator {indicator_id}")
                 cleaned_data = clean_data(data, "inegi")
+                logging.info(
+                    f"Storing data for INEGI indicator {indicator_id} in collection {collection_name}"
+                )
                 store_data(cleaned_data, collection_name)
 
-        # Update Banxico data
-        banxico_series_id = "SF43718"  # Example series ID
-        banxico_start_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-        banxico_end_date = datetime.now().strftime("%Y-%m-%d")
-
-        banxico_data = get_banxico_data(
-            banxico_series_id, banxico_start_date, banxico_end_date
-        )
+        # Actualizar datos de Banxico
+        logging.info("Processing Banxico data")
+        banxico_data = get_banxico_data()
         if banxico_data:
-            db["banxico"].delete_many({})  # Remove old data
+            logging.info("Cleaning data for Banxico")
             cleaned_data = clean_data(banxico_data, "banxico")
+            logging.info("Storing data for Banxico in collection banxico")
             store_data(cleaned_data, "banxico")
 
         logging.info("Data update completed.")
     except Exception as e:
         logging.error(f"An error occurred: {e}")
     finally:
-        client.close()  # Close MongoDB connection
+        client.close()  # Cerrar conexión a MongoDB
         logging.info("MongoDB connection closed.")
+        print("Script completed successfully.")
 
 
 if __name__ == "__main__":

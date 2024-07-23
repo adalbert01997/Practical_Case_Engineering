@@ -22,3 +22,159 @@
 2024-07-22 20:34:11,074:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorDetails:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorCode:140"]
 2024-07-22 20:34:11,359:INFO:Successful connection to Banxico API.
 2024-07-22 20:34:12,095:INFO:New data for banxico stored in MongoDB.
+2024-07-22 21:14:37,608:INFO:Starting update_data script.
+2024-07-22 21:14:37,624:INFO:Environment variables loaded.
+2024-07-22 21:14:38,171:INFO:Connected to MongoDB.
+2024-07-22 21:14:38,171:INFO:Starting data extraction process.
+2024-07-22 21:14:38,171:INFO:Processing INEGI indicator consumer_confidence
+2024-07-22 21:14:38,171:INFO:Fetching INEGI data for indicator consumer_confidence
+2024-07-22 21:14:38,171:ERROR:An error occurred: 'geo_area'
+2024-07-22 21:14:38,171:INFO:MongoDB connection closed.
+2024-07-22 21:20:09,706:INFO:Starting update_data script.
+2024-07-22 21:20:09,706:INFO:Environment variables loaded.
+2024-07-22 21:20:10,141:INFO:Connected to MongoDB.
+2024-07-22 21:20:10,141:INFO:Starting data extraction process.
+2024-07-22 21:20:10,141:INFO:Processing INEGI indicator consumer_confidence
+2024-07-22 21:20:10,141:INFO:Fetching INEGI data for indicator consumer_confidence
+2024-07-22 21:20:10,141:ERROR:An error occurred: 'geo_area'
+2024-07-22 21:20:10,141:INFO:MongoDB connection closed.
+2024-07-22 21:22:37,519:INFO:Starting update_data script.
+2024-07-22 21:22:37,525:INFO:Environment variables loaded.
+2024-07-22 21:22:38,105:INFO:Connected to MongoDB.
+2024-07-22 21:22:38,106:INFO:Starting data extraction process.
+2024-07-22 21:22:38,106:INFO:Processing INEGI indicator consumer_confidence
+2024-07-22 21:22:38,106:INFO:Fetching INEGI data for indicator consumer_confidence
+2024-07-22 21:22:38,107:ERROR:An error occurred: 'geo_area'
+2024-07-22 21:22:38,107:INFO:MongoDB connection closed.
+2024-07-22 21:26:02,579:INFO:Starting update_data script.
+2024-07-22 21:26:02,579:INFO:Environment variables loaded.
+2024-07-22 21:26:03,248:INFO:Connected to MongoDB.
+2024-07-22 21:26:03,249:INFO:Starting data extraction process.
+2024-07-22 21:26:03,249:INFO:Processing INEGI indicator consumer_confidence
+2024-07-22 21:26:03,249:INFO:Fetching INEGI data for indicator consumer_confidence
+2024-07-22 21:26:03,249:ERROR:An error occurred: 'geo_area'
+2024-07-22 21:26:03,250:INFO:MongoDB connection closed.
+2024-07-22 21:27:39,622:INFO:Starting update_data script.
+2024-07-22 21:27:39,634:INFO:Environment variables loaded.
+2024-07-22 21:27:40,172:INFO:Connected to MongoDB.
+2024-07-22 21:27:40,172:INFO:Starting data extraction process.
+2024-07-22 21:27:40,172:INFO:Processing INEGI indicator consumer_confidence
+2024-07-22 21:27:40,172:INFO:Fetching INEGI data for indicator consumer_confidence
+2024-07-22 21:27:40,172:ERROR:An error occurred: 'geo_area'
+2024-07-22 21:27:40,172:INFO:MongoDB connection closed.
+2024-07-22 21:28:50,477:INFO:Starting update_data script.
+2024-07-22 21:28:50,477:INFO:Environment variables loaded.
+2024-07-22 21:28:51,068:INFO:Connected to MongoDB.
+2024-07-22 21:28:51,068:INFO:Starting data extraction process.
+2024-07-22 21:28:51,069:INFO:Processing INEGI indicator consumer_confidence
+2024-07-22 21:28:51,069:INFO:Fetching INEGI data for indicator consumer_confidence
+2024-07-22 21:28:51,721:ERROR:Error connecting to INEGI API for indicator consumer_confidence: 405
+2024-07-22 21:28:51,722:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, consumer_confidence","ErrorDetails:El valor no tiene un formato valido, consumer_confidence","ErrorCode:140"]
+2024-07-22 21:28:51,724:INFO:Processing INEGI indicator PIB
+2024-07-22 21:28:51,726:INFO:Fetching INEGI data for indicator PIB
+2024-07-22 21:28:52,258:ERROR:Error connecting to INEGI API for indicator PIB: 405
+2024-07-22 21:28:52,258:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, PIB","ErrorDetails:El valor no tiene un formato valido, PIB","ErrorCode:140"]
+2024-07-22 21:28:52,258:INFO:Processing INEGI indicator Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:28:52,258:INFO:Fetching INEGI data for indicator Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:28:52,758:ERROR:Error connecting to INEGI API for indicator Gasto nacional en educación total como porcentaje del PIB: 405
+2024-07-22 21:28:52,758:ERROR:Response content: ["ErrorInfo:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorDetails:El valor no tiene un formato valido, Gasto nacional en educación total como porcentaje del PIB","ErrorCode:140"]
+2024-07-22 21:28:52,759:INFO:Processing Banxico data
+2024-07-22 21:28:52,759:INFO:Fetching Banxico data
+2024-07-22 21:28:53,099:INFO:Successful connection to Banxico API.
+2024-07-22 21:28:53,099:INFO:Cleaning data for Banxico
+2024-07-22 21:28:53,210:INFO:Storing data for Banxico in collection banxico
+2024-07-22 21:32:17,225:INFO:MongoDB connection closed.
+2024-07-22 21:35:23,602:INFO:Starting update_data script.
+2024-07-22 21:35:23,602:INFO:Environment variables loaded.
+2024-07-22 21:35:24,146:INFO:Connected to MongoDB.
+2024-07-22 21:35:24,147:INFO:Starting data extraction process.
+2024-07-22 21:35:24,147:INFO:Processing INEGI indicator 1002000001
+2024-07-22 21:35:24,147:INFO:Fetching INEGI data for indicator 1002000001
+2024-07-22 21:35:24,798:INFO:Successful connection to INEGI API for indicator 1002000001.
+2024-07-22 21:35:24,798:INFO:Cleaning data for INEGI indicator 1002000001
+2024-07-22 21:35:24,875:INFO:Storing data for INEGI indicator 1002000001 in collection consumer_confidence
+2024-07-22 21:35:26,399:INFO:New data for consumer_confidence stored in MongoDB.
+2024-07-22 21:35:26,399:INFO:Processing INEGI indicator 472079
+2024-07-22 21:35:26,400:INFO:Fetching INEGI data for indicator 472079
+2024-07-22 21:35:26,907:INFO:Successful connection to INEGI API for indicator 472079.
+2024-07-22 21:35:26,907:INFO:Cleaning data for INEGI indicator 472079
+2024-07-22 21:35:26,943:INFO:Storing data for INEGI indicator 472079 in collection PIB
+2024-07-22 21:35:28,320:INFO:New data for PIB stored in MongoDB.
+2024-07-22 21:35:28,320:INFO:Processing INEGI indicator 6207067825
+2024-07-22 21:35:28,320:INFO:Fetching INEGI data for indicator 6207067825
+2024-07-22 21:35:28,957:INFO:Successful connection to INEGI API for indicator 6207067825.
+2024-07-22 21:35:28,958:INFO:Cleaning data for INEGI indicator 6207067825
+2024-07-22 21:35:28,973:INFO:Storing data for INEGI indicator 6207067825 in collection Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:35:30,808:INFO:New data for Gasto nacional en educación total como porcentaje del PIB stored in MongoDB.
+2024-07-22 21:35:30,808:INFO:Processing Banxico data
+2024-07-22 21:35:30,808:INFO:Fetching Banxico data
+2024-07-22 21:35:31,123:INFO:Successful connection to Banxico API.
+2024-07-22 21:35:31,123:INFO:Cleaning data for Banxico
+2024-07-22 21:35:31,170:INFO:Storing data for Banxico in collection banxico
+2024-07-22 21:38:01,597:INFO:MongoDB connection closed.
+2024-07-22 21:39:17,518:INFO:Starting update_data script.
+2024-07-22 21:39:17,523:INFO:Environment variables loaded.
+2024-07-22 21:39:18,119:INFO:Connected to MongoDB.
+2024-07-22 21:39:18,119:INFO:Starting data extraction process.
+2024-07-22 21:39:18,119:INFO:Processing INEGI indicator 1002000001
+2024-07-22 21:39:18,119:INFO:Fetching INEGI data for indicator 1002000001
+2024-07-22 21:39:18,785:INFO:Successful connection to INEGI API for indicator 1002000001.
+2024-07-22 21:39:18,787:INFO:Cleaning data for INEGI indicator 1002000001
+2024-07-22 21:39:18,854:INFO:Storing data for INEGI indicator 1002000001 in collection consumer_confidence
+2024-07-22 21:39:18,854:INFO:Storing data in collection consumer_confidence
+2024-07-22 21:39:20,447:INFO:New data for consumer_confidence stored in MongoDB.
+2024-07-22 21:39:20,447:INFO:Processing INEGI indicator 472079
+2024-07-22 21:39:20,448:INFO:Fetching INEGI data for indicator 472079
+2024-07-22 21:39:20,962:INFO:Successful connection to INEGI API for indicator 472079.
+2024-07-22 21:39:20,962:INFO:Cleaning data for INEGI indicator 472079
+2024-07-22 21:39:21,002:INFO:Storing data for INEGI indicator 472079 in collection PIB
+2024-07-22 21:39:21,002:INFO:Storing data in collection PIB
+2024-07-22 21:39:22,500:INFO:New data for PIB stored in MongoDB.
+2024-07-22 21:39:22,500:INFO:Processing INEGI indicator 6207067825
+2024-07-22 21:39:22,500:INFO:Fetching INEGI data for indicator 6207067825
+2024-07-22 21:39:23,175:INFO:Successful connection to INEGI API for indicator 6207067825.
+2024-07-22 21:39:23,175:INFO:Cleaning data for INEGI indicator 6207067825
+2024-07-22 21:39:23,214:INFO:Storing data for INEGI indicator 6207067825 in collection Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:39:23,214:INFO:Storing data in collection Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:39:25,187:INFO:New data for Gasto nacional en educación total como porcentaje del PIB stored in MongoDB.
+2024-07-22 21:39:25,187:INFO:Processing Banxico data
+2024-07-22 21:39:25,188:INFO:Fetching Banxico data
+2024-07-22 21:39:25,651:INFO:Successful connection to Banxico API.
+2024-07-22 21:39:25,674:INFO:Cleaning data for Banxico
+2024-07-22 21:39:25,881:INFO:Storing data for Banxico in collection banxico
+2024-07-22 21:39:25,882:INFO:Storing data in collection banxico
+2024-07-22 21:39:47,113:INFO:MongoDB connection closed.
+2024-07-22 21:40:03,451:INFO:Starting update_data script.
+2024-07-22 21:40:03,451:INFO:Environment variables loaded.
+2024-07-22 21:40:03,777:INFO:Connected to MongoDB.
+2024-07-22 21:40:03,777:INFO:Starting data extraction process.
+2024-07-22 21:40:03,777:INFO:Processing INEGI indicator 1002000001
+2024-07-22 21:40:03,777:INFO:Fetching INEGI data for indicator 1002000001
+2024-07-22 21:40:04,406:INFO:Successful connection to INEGI API for indicator 1002000001.
+2024-07-22 21:40:04,407:INFO:Cleaning data for INEGI indicator 1002000001
+2024-07-22 21:40:04,431:INFO:Storing data for INEGI indicator 1002000001 in collection consumer_confidence
+2024-07-22 21:40:04,432:INFO:Storing data in collection consumer_confidence
+2024-07-22 21:40:04,969:INFO:New data for consumer_confidence stored in MongoDB.
+2024-07-22 21:40:04,969:INFO:Processing INEGI indicator 472079
+2024-07-22 21:40:04,969:INFO:Fetching INEGI data for indicator 472079
+2024-07-22 21:40:05,486:INFO:Successful connection to INEGI API for indicator 472079.
+2024-07-22 21:40:05,486:INFO:Cleaning data for INEGI indicator 472079
+2024-07-22 21:40:05,507:INFO:Storing data for INEGI indicator 472079 in collection PIB
+2024-07-22 21:40:05,507:INFO:Storing data in collection PIB
+2024-07-22 21:40:05,605:INFO:New data for PIB stored in MongoDB.
+2024-07-22 21:40:05,607:INFO:Processing INEGI indicator 6207067825
+2024-07-22 21:40:05,607:INFO:Fetching INEGI data for indicator 6207067825
+2024-07-22 21:40:06,137:INFO:Successful connection to INEGI API for indicator 6207067825.
+2024-07-22 21:40:06,137:INFO:Cleaning data for INEGI indicator 6207067825
+2024-07-22 21:40:06,164:INFO:Storing data for INEGI indicator 6207067825 in collection Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:40:06,164:INFO:Storing data in collection Gasto nacional en educación total como porcentaje del PIB
+2024-07-22 21:40:06,259:INFO:New data for Gasto nacional en educación total como porcentaje del PIB stored in MongoDB.
+2024-07-22 21:40:06,260:INFO:Processing Banxico data
+2024-07-22 21:40:06,260:INFO:Fetching Banxico data
+2024-07-22 21:40:06,591:INFO:Successful connection to Banxico API.
+2024-07-22 21:40:06,591:INFO:Cleaning data for Banxico
+2024-07-22 21:40:06,708:INFO:Storing data for Banxico in collection banxico
+2024-07-22 21:40:06,708:INFO:Storing data in collection banxico
+2024-07-22 21:40:14,955:INFO:New data for banxico stored in MongoDB.
+2024-07-22 21:40:14,955:INFO:Data update completed.
+2024-07-22 21:40:15,348:INFO:MongoDB connection closed.

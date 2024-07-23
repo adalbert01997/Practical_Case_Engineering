@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # INEGI_API_URL = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicator_id}/es/00/false/BISE/2.0/{token}?type=json"
-INEGI_API_URL = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicator_id}/es/{geo_area}/false/BISE/2.0/{token}?type=json"
+INEGI_API_URL = "https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/{indicator_id}/es/00/false/BISE/2.0/{token}?type=json"
 
 
 BANXICO_API_URL = (
@@ -14,10 +14,6 @@ MONGO_URI = os.getenv("MONGO_URI")
 
 INEGI_TOKEN = os.getenv("INEGI_TOKEN")
 BANXICO_TOKEN = os.getenv("BANXICO_TOKEN")
-
-print("BANXICO_TOKEN:", BANXICO_TOKEN)
-print("INEGI_TOKEN:", INEGI_TOKEN)
-print("MONGO_URI:", MONGO_URI)
 
 INDICATORS = {
     "454168": "consumer_confidence",
